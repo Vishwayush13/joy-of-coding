@@ -11,10 +11,13 @@ int main(){
             v[s[i]-'a']++;
     }
     int maxfreq=0;
+    char ans ='a';
     for(int i=0;i<v.size();i++){
-        maxfreq=max(v[i],maxfreq);
+        if(v[i]>maxfreq){
+            maxfreq=v[i];
+            ans=i+'a';
     }
-    cout<<"maximum frequency is :"<<maxfreq<<endl;
+    cout<<"maximum frequency is :"<<maxfreq<<"of "<<ans<<endl;
     return 0;
 }
 
